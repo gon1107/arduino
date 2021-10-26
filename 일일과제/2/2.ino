@@ -4,19 +4,17 @@ const int led[6] = {3, 5, 6, 9, 10, 11};
 const int analogPin = A0;
 int count = 0;
 
+int randNumber = random (683, 341);
+int randNumber2 = random (1, 341);
+int randNumber3 = random (342, 341);
+
 void setup() {
-  Serial.begin(115200);
   randomSeed(1024);
 }
 
 void loop() {
-  randomSeed(1024);
-  int randNumber = random (683, 341);
-  int randNumber2 = random (1, 341);
-  int randNumber3 = random (342, 341);
-
   int sensorInput = analogRead(analogPin);
-//  Serial.println(sensorInput);
+
   if(sensorInput==randNumber && count==0){
     analogWrite(led[0], 255);
     count++;

@@ -9,7 +9,7 @@ int randNumber2 = random (1, 341);
 int randNumber3 = random (342, 341);
 
 void setup() {
-  randomSeed(1024);
+  randomSeed(analogRead(analogPin));
 }
 
 void loop() {
@@ -19,14 +19,14 @@ void loop() {
     analogWrite(led[0], 255);
     count++;
   }
-
-  if(sensorInput==randNumber2 && count==1){
+  else if(sensorInput==randNumber2 && count==1){
     analogWrite(led[1], 255);
     count++;
   }
-  if(sensorInput==randNumber3 && count==2){
+  else if(sensorInput==randNumber3 && count==2){
     analogWrite(led[2], 255);
-    count++;
+    delay(500);
+    
     for(int n=0;n<=2;n++)
       analogWrite(led[n], 0);
     for(int i=0;i<=2;i++){
@@ -39,5 +39,6 @@ void loop() {
         delay(200);
       }
     }
+   count=0;
   }
 }

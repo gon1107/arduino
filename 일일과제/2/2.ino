@@ -4,12 +4,20 @@ const int led[6] = {3, 5, 6, 9, 10, 11};
 const int analogPin = A0;
 int count = 0;
 
-int randNumber = random (683, 341);
-int randNumber2 = random (1, 341);
-int randNumber3 = random (342, 341);
+int randNumber;
+int randNumber2;
+int randNumber3;
 
 void setup() {
+  Serial.begin(115200);
   randomSeed(analogRead(analogPin));
+  randNumber = random (683, 1023);
+  randNumber2 = random (0, 342);
+  randNumber3 = random (342, 683);
+
+  Serial.println(randNumber);
+  Serial.println(randNumber2);
+  Serial.println(randNumber3);
 }
 
 void loop() {

@@ -1,6 +1,6 @@
 //p.199
 
-const int ACITIVE_BUZZER = 10;
+const int ACTIVE_BUZZER = 9;
 
 void setup() {
   pinMode(ACTIVE_BUZZER, OUTPUT);

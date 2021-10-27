@@ -11,7 +11,7 @@ int randNumber3;
 void setup() {
   Serial.begin(115200);
   randomSeed(analogRead(analogPin));
-  randNumber = random (683, 1023);
+  randNumber = random (683, 1024);
   randNumber2 = random (0, 342);
   randNumber3 = random (342, 683);
 

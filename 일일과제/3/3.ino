@@ -74,7 +74,11 @@ void loop() {
       digitalWrite(ACTIVE_BUZZER, LOW);
     }
     else if(digitalRead(button[2])==HIGH){
-      count++;
+      count=0;
+
+      Serial.println("문제 1) 다음 중 컴퓨터의 기능이 아닌 것은?");
+      Serial.println("1. 출력기능  2. 입력기능");
+      Serial.println("3. 연산기능  4. 판단기능");
 
       for(int i=0;i<note_length;i++){
         if(note[i] != ' '){

@@ -18,6 +18,6 @@ void loop() {
     t_high++;
     if(t_high>255)
       t_high = 0;
-      analogWrite(LED, t_high);
+    analogWrite(LED, t_high);
   }
 }

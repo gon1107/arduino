@@ -1,6 +1,6 @@
 #include "NDelayFunc.h"
 #include "DHT.h"
-#define DHTPIN 2
+#define DHTPIN 4
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE); // DHT 객체를 생성, dht(2, 11)
 
